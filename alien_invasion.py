@@ -9,7 +9,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))
     pygame.display.set_caption("Alien_Invasion")
-
+    clock = pygame.time.Clock()
     #创建一艘飞船
     ship = Ship(ai_settings,screen)
 
@@ -18,7 +18,8 @@ def run_game():
         gf.check_events(ship)
         ship.update()
         gf.update_screen(ai_settings,screen,ship)
-        
+        #帧率
+        clock.tick(120)
 
 if __name__ == '__main__':
     run_game()
