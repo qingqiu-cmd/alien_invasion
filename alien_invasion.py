@@ -6,7 +6,7 @@ def run_game():
     screen = pygame.display.set_mode((900,600))
     pygame.display.set_caption("Alien_Invasion")
     #设置背景色
-    bg_color = (230,230,230)
+    bg_color = (230,0,230)
 
     #开始游戏主循环
     while True:
